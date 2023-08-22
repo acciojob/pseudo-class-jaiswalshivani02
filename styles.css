@@ -1,1 +1,26 @@
 /*  your css code here. If applicable */
+/* Apply margin to the container */
+#container {
+    margin: 20px;
+    position: relative; /* Needed for pseudo-elements */
+}
+
+/* Style for the content inserted before the main content */
+#container::before {
+    content: "Before Text";
+    color: #f00;
+    font-size: 20px;
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: 0;
+}
+
+/* Style for the content inserted after the main content */
+#container::after {
+    content: "After Text";
+    color: #f00;
+    font-size: 20px;
+    position: absolute;
+    bottom: -30px; /* Adjust as needed */
+    right: 0;
+}
